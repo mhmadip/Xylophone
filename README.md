@@ -6,3 +6,4 @@ Features of this simple app:
 - generate repeated user interface Widgets.
 - Expanded is used to make UI applies responsive design.
 - SafeArea is considered.
+![Screenshot](xylophine.png)
