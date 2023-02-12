@@ -5,10 +5,13 @@ void main() => runApp(XylophoneApp());
 
 class XylophoneApp extends StatelessWidget {
   void playSound(int soundNumber) {
-    final player = AudioCache();
-    player.play('note$soundNumber.wav');
-  }
+   final player = AudioPlayer();
+   player.play(UrlSource('note$soundNumber.wav'));
 
+  // If file located in assets folder like assets/sounds/note01.wave"
+  await player.play(AssetSource('sounds/note$soundNumber.wav'));
+  }
+// its better to not use function as given below, but using a StatelessWidget
   Expanded buildKey(int soundNo, MaterialStateColor materialStateColor) {
     return Expanded(
       child: TextButton(
